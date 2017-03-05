@@ -122,7 +122,7 @@ function createChart() {
 
 			//set the title of this cell to give a description of the data. 
 			//it will appear when hovered over.
-			$(this).attr('title', 'Expected Points for, Go For It: ' + goForItVal + ', Field Goal: ' 
+			$(this).attr('title', 'Expected Points for... Go For It: ' + goForItVal + ', Field Goal: ' 
 					+ fieldGoalVal + ', Punt: ' + puntVal 
 					+ ', On 4th & ' + (row + 1)
 					+ ', At the  ' + col + ' yard line.');
