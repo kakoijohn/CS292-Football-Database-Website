@@ -101,7 +101,7 @@ function createChart() {
 
 		//Go back through the row numbers and put 4th & before the number. 
 		$("td.google-visualization-table-td.google-visualization-table-seq").each(function(e) {
-			console.log($(this).text("4th & " + $(this).text()));
+			$(this).text("4th & " + $(this).text());
 		});
 
 		//Mouse over table cell function.
@@ -148,7 +148,13 @@ function createChart() {
 			$(this).attr('title', $(this).data('tipText'));
 			$('.tooltip').remove();
 		}).mousemove(function(e) {
-			var mousex = e.pageX + 20; //Get X coordinates
+			var mousex;
+			if (e.pageX + 100 > $(window).width()) {
+				mousex = e.pageX - 100;
+			} else {
+				mousex = e.pageX + 20;
+			}
+			 //Get X coordinates
 			var mousey = e.pageY + 10; //Get Y coordinates
 			$('.tooltip').css({
 				top : mousey,
